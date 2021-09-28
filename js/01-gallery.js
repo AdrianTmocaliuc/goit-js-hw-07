@@ -21,8 +21,7 @@ galleryList.addEventListener('click', e => {
         `<img src='${e.target.dataset.source}'>`
     );
     instance.show();
-    if (e.key === 'Escape')
-        instance.close();
+    // return
 });
 
 document.addEventListener('keydown', e => {
