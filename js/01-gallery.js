@@ -13,14 +13,14 @@ const listOfImages = galleryItems
     .join('');
 
     // console.log(listOfImages);
-galleryList.insertAdjacentHTML('beforeend', listOfImages)
+galleryList.insertAdjacentHTML('beforeend', listOfImages);
 
-galleryList.addEventListener('click', e => {
-    e.preventDefault();
-    if (!e.target.classList.contains('gallery__image')) return false;
-    // console.log(e.target);
-    return galleryItems.dataset.source;
-})
+// galleryList.addEventListener('click', e => {
+//     e.preventDefault();
+//     if (!e.target.classList.contains('gallery__image')) return false;
+//     // console.log(e.target);
+//     return galleryItems.dataset.source;
+// });
 
 //  https://github.com/corund1976/goit-js-hw-07
 
