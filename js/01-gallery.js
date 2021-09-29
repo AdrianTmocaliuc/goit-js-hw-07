@@ -14,14 +14,13 @@ const listOfImages = galleryItems
 galleryList.insertAdjacentHTML('beforeend', listOfImages);
 
 galleryList.addEventListener('click', e => {
-    if (!e.target.classList.contains('gallery__image')) return false;
+    if (!e.target.classList.contains('gallery__image')) return;
     e.preventDefault();
     // console.log(e.target);
     instance = basicLightbox.create(
         `<img src='${e.target.dataset.source}'>`
     );
     instance.show();
-    // return
 });
 
 document.addEventListener('keydown', e => {
@@ -29,6 +28,27 @@ document.addEventListener('keydown', e => {
         instance.close();
 })
 
+
+// const handler = e => {
+//   if (e.key === "Escape") { instance.close(); console.log("Escape") }
+//   else(console.log("hoW"))
+// }
+
+// galleryNode.addEventListener("click", e => {
+//   if (e.target.tagName !== "IMG") { return  };
+//   e.preventDefault();
+
+//   // 1 method
+//   let linkImg = e.target.dataset.source;
+//   instance = basicLightbox.create(<img src='${linkImg}'  width="800" height="600">,
+//   //false  true для closable щоб бачити спрацювання для keydown
+//     { closable: true,
+//       onShow: (instance) => { document.addEventListener("keydown", handler) },
+//       onClose: (instance) => { document.removeEventListener("keydown", handler) }
+//     })
+
+//     instance.show()
+//   })
 
 
 
